@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فتح الأندلس - 711م</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        /* خلفية الفيديو */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7; /* جعل الفيديو أقل وضوحًا لتسهيل قراءة النصوص */
+        }
+        /* تصميم الهيدر */
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffcc00;
+        }
+        /* تصميم تفاصيل المعركة */
+        .battle-details {
+            max-width: 900px;
+            margin: 150px auto;
+            background-color: rgba(0, 0, 0, 0.6); /* خلفية معتمة لتحسين وضوح النص */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            position: relative;
+        }
+        .battle-details h1 {
+            font-size: 30px;
+            color: #ffcc00; /* لون مميز للعناوين */
+        }
+        .battle-details p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+        .battle-details img {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* نافذة منبثقة */
+        .modal {
+            display: none; /* يبدأ مخفيًا */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* خلفية مظلمة */
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 900px;
+            color: #333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            float: right;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .read-more-btn {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .read-more-btn:hover {
+            background-color: #e6b800;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- خلفية الفيديو -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="img/v1.mp4" type="video/mp4">
+            فيديو الخلفية غير مدعوم
+        </video>
+    </div>
+
+    <!-- الهيدر -->
+    <header>
+        <h1>فتح الأندلس - 711م</h1>
+    </header>
+
+    <!-- تفاصيل المعركة -->
+    <div class="battle-details">
+        <h1>تفاصيل المعركة</h1>
+        <img src="img/q1.jpg" alt="فتح الأندلس">
+
+        <p>يمتد تاريخ الأندلس لأكثر من ثمانمائة عام من التاريخ الإسلامي...</p>
+        <!-- زر "اقرأ المزيد" لفتح النافذة المنبثقة -->
+        <button class="read-more-btn" onclick="openModal()">اقرأ المزيد</button>
+    </div>
+
+    <!-- نافذة منبثقة -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>تفاصيل المعركة - فتح الأندلس</h2>
+            <img src="img/q1.jpg" alt="فتح الأندلس" style="width: 100%; max-width: 800px; margin-top: 20px;">
+            <p>يمتد تاريخ الأندلس لأكثر من ثمانمائة عام من التاريخ الإسلامي...</p>
+            <p>الشرح الكامل للتفاصيل، الأحداث، والأهمية التاريخية...</p>
+            <!-- يمكنك إضافة المزيد من التفاصيل هنا -->
+        </div>
+    </div>
+
+    <script>
+        // دالة لفتح النافذة المنبثقة
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // دالة لإغلاق النافذة المنبثقة
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
